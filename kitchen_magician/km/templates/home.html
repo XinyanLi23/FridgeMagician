@@ -1,0 +1,103 @@
+{% extends "base.html" %} 
+{% load static %}
+
+        {% block css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"/>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        {% endblock css %}
+
+        {% block content %}
+        
+        <!-- slider -->
+        <section id="showcase-slider">
+            <div class="container">
+                <div class="slider-container">
+                    <div>
+                        <div>
+                            <div class="slider">
+                                <div class="img" id="first">
+                                    <img src="{% static 'images/K6O.jpg' %}">
+                                </div>
+                                <div class="img">
+                                    <img src="{% static 'images/K2O.jpg' %}">
+                                </div>
+                                <div class="img">
+                                    <img src="{% static 'images/K3O.jpg' %}">
+                                </div>
+                                <div class="img">
+                                    <img src="{% static 'images/K4O.jpg' %}">
+                                </div>
+                                <div class="img">
+                                    <img src="{% static 'images/K5O.jpg' %}">
+                                </div>
+                                <div class="img">
+                                    <img src="{% static 'images/K6O.jpg' %}">
+                                </div>
+                                <div class="img" id="last">
+                                    <img src="{% static 'images/K2O.jpg' %}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <button class="btn" id="prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="btn" id="next"><i class="fas fa-chevron-right"></i></button>
+    
+                    <ul>
+                        <li class="option colored"></li>
+                        <li class="option"></li>
+                        <li class="option"></li>
+                        <li class="option"></li>
+                    </ul>
+                </div>
+            </div>
+
+                        <!-- <div class="slider">
+                            <p>Welcome to Kitchen Magician</p>
+                            <img src="{% static 'images/K2O.jpg' %}" alt="">
+                        </div>
+                        <div class="slider">
+                            <p>Welcome to Kitchen Magician</p>
+                            <img src="{% static 'images/K3O.jpg' %}" alt="">
+                        </div>
+                        <div class="slider">
+                            <p>Welcome to Kitchen Magician</p>
+                            <img src="{% static 'images/K4O.jpg' %}" alt="">
+                        </div>
+                        <div class="slider">
+                            <p>Welcome to Kitchen Magician</p>
+                            <img src="{% static 'images/K5O.jpg' %}" alt="">
+                        </div> -->
+                    
+                <!-- <div id="showcase-title-block">
+                    <h1>Welcome to Kitchen Magician</h1>
+                    <div id="title-line"></div>
+                    <h2>Fresh Healthy Convenient</h2>
+                </div> -->
+        </section>
+
+        <!-- <section id="showcase">
+            <div class="container">
+                <div id="search-box" class="search-box-block">
+                    <input id="search-text-id" class="search-text" type="text" name="box" placeholder="Find Meals For You">
+                    <a class="search-btn" href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </div> 
+            </div>
+        </section> -->
+
+        <section id="images">
+            <div class="container">
+                <img src="{% static 'images/1.jpg' %}" alt="" id="img1" class="images-img" />
+                <img src="{% static 'images/2.jpg' %}" alt="" class="images-img" />
+                <img src="{% static 'images/3.jpg' %}" alt="" class="images-img" />
+            </div>
+        </section>
+
+        {% endblock content %}
+
+        {% block script %}
+        <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
+        {% endblock script %}

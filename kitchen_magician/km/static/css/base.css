@@ -1,0 +1,96 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    color: #f56a58;
+    /* avenir-lt-w01_35-light1475496, sans-serif; */
+}
+
+/* GLOBAL */
+body {
+    background-color: #fef9f6;
+    min-height: 200vh;
+    color: #555; 
+    font-size: 16px;
+    line-height: 1.6em;
+    margin: 0px;
+}
+
+.container {
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 10%;
+}
+
+/* HEADER */
+header .container {
+    display: flex;
+}
+
+header .KitchenMagician {
+    display: flex;
+    flex: left;
+    position: bold;
+    font-weight: 700;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    text-decoration: none;
+}
+
+header ul {
+    display: flex;
+    flex: right;
+    position: bold;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    position: bold;
+    list-style: none;
+    display: inline;
+}
+
+header ul li a {
+    position: bold;
+    margin: 0 1.0rem;
+    text-decoration: none;
+    text-decoration: none;
+    font-size: 1.0rem;
+    padding-right: 1.0rem;
+    font-weight: 900;
+}
+
+
+/* FOOTER */
+#main-footer {
+    background: #f56a58;
+    text-align: center;
+    padding: 5px;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+#main-footer p {
+    color: #fff !important;
+
+}
+
+
+@media (max-width: 768px) {
+    #showcase {
+        background-size: 61.8% 100%;
+    }
+
+    .images-img {
+        height: 300px;
+    }
+}

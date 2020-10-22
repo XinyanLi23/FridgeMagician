@@ -21,12 +21,14 @@ body {
 .container {
     justify-content: space-between;
     align-items: center;
-    margin: 20px 10%;
+    margin: 25px 5%;
 }
 
 /* HEADER */
 header .container {
     display: flex;
+    /* justify-content: space-around;
+    overflow: hidden; */
 }
 
 header .KitchenMagician {
@@ -50,7 +52,6 @@ header ul {
     place-items: center;
     padding: 0;
     list-style: none;
-    display: flex;
 }
 
 header ul li {
@@ -61,13 +62,67 @@ header ul li {
 
 header ul li a {
     position: bold;
-    margin: 0 1.0rem;
-    text-decoration: none;
+    margin: 0 0.4rem;
     text-decoration: none;
     font-size: 1.0rem;
     padding-right: 1.0rem;
     font-weight: 900;
 }
+
+
+/* search-box */
+header li#search{
+    padding-right: 1.0rem;
+    margin: 0 0.4rem;
+}
+
+header li#search #search-box {
+    background-color: #fef9f6;
+    width: 200px;
+    height:100%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between; 
+    padding: 0px 10px;
+    border: #f56a58 2px solid;
+} 
+
+header #search #search-box .search-text {
+    background-color: #fef9f6;
+    border-color: #fef9f6;
+    outline: none;
+    border: none;
+    /* border-radius: 50px 50px 50px 50px; */
+    /* padding: 0px 10px; */
+    width: 100%;
+    line-height: 20px;
+    color: black;
+    font-size: 15px;
+    float:left;
+}
+
+header #search #search-box .search-btn {
+    color: #fef9f6;
+    float: right;
+    border-radius: 20%;
+    position: relative;
+    margin: 0;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+header #search #search-box .search-btn i {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+header #search a {
+    position: center;
+}
+
 
 
 /* FOOTER */

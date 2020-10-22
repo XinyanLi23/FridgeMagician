@@ -4,12 +4,16 @@ const options = document.querySelectorAll('.option');
 const slides = document.querySelectorAll('.img');
 
 var index = 1;
+var op_index = 0;
 var size = slides[index].clientWidth;
 
 update();
 
 function update() {
     slider.style.transform = "translateX(" + (-size * index) + "px)";
+
+    options.forEach(option => option.classList.remove('colored'));
+    options[op_index].classList.add('colored');
 }
 
 function slide() {
@@ -20,17 +24,39 @@ function slide() {
 function btnCheck() {
     if (this.id === "prev") {
         index--;
+
+        if(op_index == 0){
+            op_index = 3;
+        }
+        else{
+            op_index--;
+        }
     }
 
     else if (this.id === "next") {
         index++;
+
+        if(op_index == 3){
+            op_index = 0;
+        }
+        else{
+            op_index++;
+        }
     }
     console.log(`Turning to index: ${index}`);
+    console.log(`Turning to option: ${op_index}`);
+    slide();
+}
+
+function optionFunc(){
+    let i = Number(this.getAttribute('option-index'));
+    index = i + 1;
+    op_index = i;
     slide();
 }
 
 slider.addEventListener('transitionend', () => {
-    console.log("triggled silder event");
+    console.log("triggered slider event");
     if (slides[index].id === "first") {
         slider.style.transition = "none";
         index = slides.length - 2;
@@ -44,3 +70,4 @@ slider.addEventListener('transitionend', () => {
 })
 
 buttons.forEach(btn => btn.addEventListener('click', btnCheck));
+options.forEach(option => option.addEventListener('click', optionFunc));

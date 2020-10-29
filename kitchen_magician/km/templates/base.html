@@ -5,8 +5,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'home/css/base.css' %}" />
         <title>Mypage</title>
-        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
         {% block css %}{% endblock css %}
 
         {% if title %}
@@ -21,10 +22,10 @@
         <header id="header">
             <div class="container">
                 <a href="{% url 'home' %}" class="KitchenMagician">Kitchen Magician</a>
-                <ul>
-                    <li><a href="#">GROUP</a></li>
-                    <li><a href="{% url 'about' %}">ABOUT</a></li>
-                    <li><a href="#">PROFILE</a></li>
+                <ul id="ul-nav-link">
+                    <li class="nar-link"><a href="#">GROUP</a></li>
+                    <li class="nar-link"><a href="{% url 'about' %}">ABOUT</a></li>
+                    <li class="nar-link"><a href="#">PROFILE</a></li>
                     <li id="search">
                         <div id="search-box" class="search-box-block">
                             <input id="search-text-id" class="search-text" type="text" name="box" placeholder="Find Meals For You">
@@ -33,7 +34,7 @@
                             </a>
                         </div> 
                     </li>
-                    <li><a href="#">LOG IN/SIGN UP</a></li>
+                    <li class="nar-link"><a href="#">LOG IN/SIGN UP</a></li>
                 </ul>
             </div>
         </header>

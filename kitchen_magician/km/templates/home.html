@@ -1,87 +1,139 @@
 {% extends "base.html" %} 
-{% load static %}
+{% load static %} 
+{% block css %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'home/css/home.css' %}" />
+{% endblock css %} 
 
-        {% block css %}
-        <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"/>
-        {% endblock css %}
 
-        {% block content %}
-        
-        <!-- slider -->
-        <section id="showcase-slider">
-            <div class="container">
-                <div class="slider-container">
-                    <div>
-                        <div>
-                            <div class="slider">
-                                <div class="img" id="first">
-                                    {% with trending_recipes|last as last_element %}
-                                    <img src="{% static last_element.img %}">
-                                    {% endwith %}
-                                </div>
-                                
-                                {% for trending in trending_recipes %}
-                                <div class="img">
-                                    <img src="{% static trending.img %}">
-                                </div>
-                                {% endfor %}
-                                
-                                <div class="img" id="last">
-                                    <img src="{% static trending_recipes.0.img %}">
-                                </div>
-                                <!-- <div class="img" id="first">
-                                    <img src="{% static 'images/K5O.jpg' %}">
-                                </div>
-                                <div class="img">
-                                    <img src="{% static 'images/K2O.jpg' %}">
-                                </div>
-                                <div class="img">
-                                    <img src="{% static 'images/K3O.jpg' %}">
-                                </div>
-                                <div class="img">
-                                    <img src="{% static 'images/K4O.jpg' %}">
-                                </div>
-                                <div class="img">
-                                    <img src="{% static 'images/K5O.jpg' %}">
-                                </div>
-                                <div class="img" id="last">
-                                    <img src="{% static 'images/K2O.jpg' %}">
-                                </div> -->
-                            </div>
-                        </div>
+{% block content %}
+<!-- showcase-carousel -->
+<section id=showcase-carousel>
+    <div class="container">
+        <div id="myCarousel" class="carousel slide">
+            <!-- Indicators -->
+            <ul class="carousel-indicators">
+                <li class="item1 option-item active option"></li>
+                <li class="item2 option-item option"></li>
+                <li class="item3 option-item option"></li>
+                <li class="item4 option-item option"></li>
+            </ul>
+            <!-- The slideshow -->
+            <div class="carousel-inner">
+                {% for trc in trending_recipes_carousel %}
+                    {% if trc == trending_recipes_carousel.0 %}
+                    <div class="carousel-item active">
+                    {% else %}
+                    <div class="carousel-item">
+                    {% endif %}
+                        <img
+                            src="{% static trc.img %}"
+                            alt="trc.alt"
+                            width="1100"
+                            height="600"
+                        />
                     </div>
-                </div>
-                <div class="content">
-                    <button class="btn" id="prev"><i class="fas fa-chevron-left"></i></button>
-                    <button class="btn" id="next"><i class="fas fa-chevron-right"></i></button>
-    
-                    <ul>
-                        <li class="option" option-index="0"></li>
-                        <li class="option" option-index="1"></li>
-                        <li class="option" option-index="2"></li>
-                        <li class="option" option-index="3"></li>
-                    </ul>
-                </div>
+                {% endfor %}
             </div>
-                    
-                <!-- <div id="showcase-title-block">
-                    <h1>Welcome to Kitchen Magician</h1>
-                    <div id="title-line"></div>
-                    <h2>Fresh Healthy Convenient</h2>
-                </div> -->
-        </section>
-
-        <section id="images">
-            <div class="container">
-                <img src="{% static 'images/1.jpg' %}" alt="" id="img1" class="images-img" />
-                <img src="{% static 'images/2.jpg' %}" alt="" class="images-img" />
-                <img src="{% static 'images/3.jpg' %}" alt="" class="images-img" />
+            <!-- Left and right controls -->
+            <div class="btn-carousel carousel-control-prev" href="">
+                <span class="carousel-control-prev-icon fas fa-chevron-left"></span>
             </div>
-        </section>
+            <div class="btn-carousel carousel-control-next" href="">
+                <span class="carousel-control-next-icon fas fa-chevron-right"></span>
+            </div>
+        </div>
+    </div>
+</section> 
 
-        {% endblock content %}
 
-        {% block script %}
-        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-        <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
-        {% endblock script %}
+<!-- banner -->
+<section id="banner">
+    <div class="container">
+        <div id="welcome">
+            <div id="showcase-title-block">
+                <h1>Welcome to Kitchen Magician</h1>
+                <div id="title-line"></div>
+                <h2>Fresh Healthy Convenient</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- groups carousel -->
+<!-- <section id="groups-carousel">
+    <div class="container">
+        <div class="hi-side">
+            <div class="btn" id="hi-prev"></div> 
+            <div class="btn" id="hi-next"></div> 
+            <ul>
+                <li><img src="{% static 'images/groups/1vegan.jpg' %}" alt=""></li>
+                <li><img src="{% static 'images/groups/2keto.jpg' %}" alt=""></li>
+                <li><img src="{% static 'images/groups/3vegetarian.jpg' %}" alt=""></li>
+                <li><img src="{% static 'images/groups/4gluten-free.jpg' %}" alt=""></li>
+                <li><img src="{% static 'images/groups/5pescatarian.jpg' %}" alt=""></li>
+                <li><img src="{% static 'images/groups/6paleo.jpg' %}" alt=""></li>
+                <li><img src="{% static 'images/groups/7low-carb.jpg' %}" alt=""></li>
+                <li><img src="{% static 'images/groups/8raw.jpg' %}" alt=""></li>
+            </ul>
+        </div> 
+    </div> 
+</section> -->
+
+
+<!-- last section -->
+<section id="images">
+    <div class="container">
+        <img src="{% static 'images/1.jpg' %}" alt="" class="images-img" />
+        <img src="{% static 'images/2.jpg' %}" alt="" class="images-img" />
+        <img src="{% static 'images/3.jpg' %}" alt="" class="images-img" />
+    </div>
+</section>
+{% endblock content %} 
+
+
+{% block script %}
+<script>
+    $(document).ready(function () {
+        // Activate the Carousel. Pause it when you move the mouse over it
+        $("#myCarousel").carousel({ interval: 2000, pause: "hover" });
+        $("#myCarousel").carousel("cycle");
+        // Enable Carousel Indicators
+        // const optionItems = document.querySelectorAll(".option-item");
+        // for (i=0; i<optionItems.length(); i++) {
+        //     optionItems[i].click(function () {
+        //         $("#myCarousel").carousel(i);
+        // });
+        // }
+        $(".item1").click(function () {
+            $("#myCarousel").carousel(0);
+        });
+        $(".item2").click(function () {
+            $("#myCarousel").carousel(1);
+        });
+        $(".item3").click(function () {
+            $("#myCarousel").carousel(2);
+        });
+        $(".item4").click(function () {
+            $("#myCarousel").carousel(3);
+        });
+
+        // Enable Carousel Controls
+        $(".carousel-control-prev").click(function () {
+            $("#myCarousel").carousel("prev");
+        });
+        $(".carousel-control-next").click(function () {
+            $("#myCarousel").carousel("next");
+        });
+    });
+</script>
+
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script type="text/javascript" src="{% static 'home/js/homeTrending.js' %}"></script>
+<script type="text/javascript" src="{% static 'home/js/homeGroups.js' %}"></script>
+{% endblock script %}

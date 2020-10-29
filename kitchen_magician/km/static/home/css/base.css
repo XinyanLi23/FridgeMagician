@@ -11,7 +11,7 @@
 /* GLOBAL */
 body {
   background-color: #fef9f6;
-  min-height: 200vh;
+  min-height: 100vh;
   color: #555;
   font-size: 16px;
   line-height: 1.6em;
@@ -147,13 +147,14 @@ body .container {
 #main-footer {
   background: #f56a58;
   text-align: center;
-  padding: 5px;
-  margin-top: 40px;
+  padding: 0.6rem 0;
   margin-bottom: 0;
+  height: auto;
 }
 
 #main-footer p {
-  color: #fff !important;
+  margin: auto;
+  color: #fef9f6 !important;
 }
 
 @media (min-width: 854px) {

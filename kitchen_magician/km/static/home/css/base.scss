@@ -13,7 +13,7 @@ $backgroundColor: #fef9f6;
 /* GLOBAL */
 body {
     background-color: $backgroundColor;
-    min-height: 200vh;
+    min-height: 100vh;
     color: #555;
     font-size: 16px;
     line-height: 1.6em;
@@ -75,17 +75,17 @@ body {
                 // padding-right: 1rem;
                 margin: 0 0.4rem;
                 #search-box {
-                    background-color: #fef9f6;
+                    background-color: $backgroundColor;
                     width: 200px;
                     height: 100%;
                     border-radius: 50px;
                     display: flex;
                     justify-content: space-between;
                     padding: 0px 10px;
-                    border: #f56a58 2.5px solid;
+                    border: $textColor 2.5px solid;
                     .search-text {
-                        background-color: #fef9f6;
-                        border-color: #fef9f6;
+                        background-color: $backgroundColor;
+                        border-color: $backgroundColor;
                         outline: none;
                         border: none;
                         /* border-radius: 50px 50px 50px 50px; */
@@ -97,7 +97,7 @@ body {
                         float: left;
                     }
                     .search-btn {
-                        color: #fef9f6;
+                        color: $backgroundColor;
                         float: right;
                         border-radius: 20%;
                         position: relative;
@@ -121,13 +121,14 @@ body {
 
 /* FOOTER */
 #main-footer {
-    background: #f56a58;
+    background: $textColor;
     text-align: center;
-    padding: 5px;
-    margin-top: 40px;
+    padding: 0.6rem 0;
     margin-bottom: 0;
+    height: auto;
     p {
-        color: #fff !important;
+        margin: auto;
+        color: $backgroundColor !important;
     }
 }
 

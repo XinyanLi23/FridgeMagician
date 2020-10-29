@@ -1,13 +1,14 @@
 /* ABOUT */
 #ABOUT {
     .container {
+        margin: 0 auto;
         #ABOUT-title {
             height: auto;
             width: 100%;
             place-items: center;
             align-items: center;
             h1 {
-                color: #f56a58;
+                color: black;
                 font-size: 45px;
                 text-align: center;
                 line-height: 1em;
@@ -48,7 +49,7 @@
                 }
                 &:hover {
                     cursor: pointer;
-                    box-shadow: 0 0 20px #f56a58;
+                    box-shadow: 0 0 20px #e79a8f;
                     transition: ease-in 0.3s;
                 }
             }
@@ -58,12 +59,14 @@
                     font-size: 25px;
                     text-align: center;
                     line-height: 1em;
+                    color: black;
                 }
                 h2 {
                     font-size: 18px;
                     text-align: center;
                     line-height: 1em;
                     padding-top: 10px;
+                    color: black;
                 }
             }
         }

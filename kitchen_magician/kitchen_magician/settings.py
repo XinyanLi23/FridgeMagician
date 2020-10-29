@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'km',
     'users',
     'about',
+    'search',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

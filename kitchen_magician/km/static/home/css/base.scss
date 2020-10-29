@@ -106,11 +106,13 @@ body {
                         /* display: flex;
                         justify-content: center;
                         align-items: center; */
-                        i {
+                        button {
                             position: absolute;
                             top: 50%;
                             left: 50%;
                             transform: translate(-50%, -50%);
+                            border: none 0 #fef9f6;;
+                            color: #fef9f6;
                         }
                     }
                 }

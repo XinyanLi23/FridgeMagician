@@ -1,0 +1,16 @@
+section#search .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+}
+
+section#search .container .search-result-title {
+  color: black;
+  width: 100%;
+}
+/*# sourceMappingURL=search.css.map */

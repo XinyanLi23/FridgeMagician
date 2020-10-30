@@ -1,4 +1,4 @@
-#!/Users/tutu/Desktop/Web/env/bin/python3
+#!/Users/allen/Desktop/SFSU/KitchenMagician/env/bin/python3
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 

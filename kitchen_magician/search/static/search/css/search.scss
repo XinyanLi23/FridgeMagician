@@ -1,0 +1,11 @@
+section#search {
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        .search-result-title {
+            color: black;
+            width: 100%;
+        }
+    }
+}

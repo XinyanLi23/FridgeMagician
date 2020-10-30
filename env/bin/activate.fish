@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/tutu/Desktop/Web/env"
+set -gx VIRTUAL_ENV "/Users/allen/Desktop/SFSU/KitchenMagician/env"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

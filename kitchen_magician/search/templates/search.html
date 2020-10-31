@@ -20,6 +20,9 @@
                         <button class="search-btn" type="submit">Search</button>
                     </div>
                 </form>
+                {% for recipe in recipes %}
+                <p>{{ recipe }}</p>
+                {% endfor %}
             </div>
         </section>
         {% endblock content %}

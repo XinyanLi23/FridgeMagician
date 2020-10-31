@@ -73,14 +73,28 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'kitchen_magician.wsgi.application'
 
+DJANGO_SETTINGS_MODULE = 'kitchen_magician.settings'
+
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        # database IP（local: localhost or 127.0.0.1）
+        'HOST': '127.0.0.1',
+        # MySQL port
+        'PORT': 3306,
+        # database user, 'root' for default, and password
+        'USER': 'root',
+        'PASSWORD': '123456789',
+        #Database Name
+        'NAME': 'kitchen_magician',
+        # character 
+        'CHARSET': 'utf8',
+        # Timezone
+        'TIME_ZONE': 'UTC',
     }
 }
 
@@ -126,3 +140,13 @@ PROJECT_ROOT = os.path.normpath(os.path.dirname(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = '/static/'
 
+# bootstrap library
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = 'home'
+LOGIN_URL = 'login'
+
+
+# Media file for images and videos
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media') 
+MEDIA_URL = '/media/'

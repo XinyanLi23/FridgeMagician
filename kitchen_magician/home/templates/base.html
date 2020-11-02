@@ -24,11 +24,29 @@
                 <a href="{% url 'home' %}" class="KitchenMagician">Kitchen Magician</a>
                 <ul id="ul-nav-link">
                     <li class="nar-link"><a href="{% url 'about' %}">ABOUT</a></li>
-                    <li class="nar-link"><a href="#">GROUPS</a></li>
-                    <li id="search">
-                        <form action="{% url 'search' %}" method="POST" id="search-form">
+                    <li class="nar-link"><a href="{% url 'groups' %}">GROUPS</a></li>
+                    <!-- TO-DO Remove the profile  -->
+                    <li class="nar-link"><a href="#">PROFILE</a></li>
+
+                    <!-- Jeff's Search -->
+
+                    <form method="POST" action="{% url 'search' %}">
+                        {% csrf_token %}
+                        <select name="filter" id="filter" class="form-control form-control-sm">
+                            <option value="none"> -- select an option -- </option>
+                            <option value="title">Title</option>
+                            <option value="author">Author</option>
+                            <option value="content">Content</option>
+                        </select>
+                        <input type="text" placeholder="Enter Keywords" name = "keyword">
+                        <input type="submit" value="Submit">
+                    </form>   
+
+                    <!-- Allen's search -->
+                    <!-- <li id="search">
+                        <form action="{% url 'search' %}" method="POST" id="search-form"> -->
                             <!-- Authentication Token -->
-                            {% csrf_token %}
+                            <!-- {% csrf_token %}
                             <div id="search-box" class="search-box-block">
                                 <input id="search-text-id" class="search-text" type="text" name="keywords" placeholder="Find Recipes For You">
                                 <div class="search-btn" type="submit">
@@ -38,7 +56,8 @@
 
 
                         </form>
-                    </li>
+                    </li> -->
+                    
                     <li class="nar-link"><a href="#">LOG IN/SIGN UP</a></li>
                 </ul>
             </div>

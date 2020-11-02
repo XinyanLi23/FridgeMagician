@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'users',
     'about',
     'search',
+    'groups',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -78,17 +79,16 @@ DJANGO_SETTINGS_MODULE = 'kitchen_magician.settings'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         # database IP（local: localhost or 127.0.0.1）
-        'HOST': '127.0.0.1',
+        'HOST': '34.123.110.159',
         # MySQL port
         'PORT': 3306,
-        # database user, 'root' for default, and password
-        'USER': 'root',
-        'PASSWORD': '123456789',
+        # database user and password
+        'USER': 'team1',
+        'PASSWORD': 'team1',
         #Database Name
         'NAME': 'kitchen_magician',
         # character 

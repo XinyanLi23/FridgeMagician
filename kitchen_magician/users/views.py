@@ -6,3 +6,9 @@ def login(request):
         'title': 'LOGIN'
     }
     return render(request, 'login.html', context)
+
+def signup(request):
+    context = {
+        'title': 'SIGNUP'
+    }
+    return render(request, 'signup.html', context)

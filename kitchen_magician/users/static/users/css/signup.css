@@ -5,17 +5,17 @@
           box-sizing: border-box;
 }
 
-#login-block .background {
+#signup-block .background {
   position: fixed;
   height: 100%;
-  left: 0;
+  right: 0;
   bottom: 0;
   z-index: -1;
 }
 
-#login-block .container {
+#signup-block .container {
   position: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -24,7 +24,7 @@
   padding: 0 2rem;
 }
 
-#login-block .container .img {
+#signup-block .container .img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,7 +36,7 @@
           align-items: center;
 }
 
-#login-block .container .img img {
+#signup-block .container .img img {
   width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -49,7 +49,7 @@
           align-items: center;
 }
 
-#login-block .container .login {
+#signup-block .container .signup {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -57,11 +57,11 @@
   z-index: 5;
 }
 
-#login-block .container .login form {
+#signup-block .container .signup form {
   width: 360px;
 }
 
-#login-block .container .login form #welcome {
+#signup-block .container .signup form #sign-up {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,17 +77,17 @@
           flex-direction: column;
 }
 
-#login-block .container .login form #welcome .avatar {
+#signup-block .container .signup form #sign-up .avatar {
   width: 100px;
 }
 
-#login-block .container .login form #welcome h2 {
+#signup-block .container .signup form #sign-up h2 {
   font-size: 2.9rem;
   text-transform: uppercase;
   margin: 15px 0;
 }
 
-#login-block .container .login form .input-div {
+#signup-block .container .signup form .input-div {
   position: relative;
   display: -ms-grid;
   display: grid;
@@ -98,7 +98,7 @@
   border-bottom: 2px solid #d9d9d9;
 }
 
-#login-block .container .login form .input-div::after, #login-block .container .login form .input-div::before {
+#signup-block .container .signup form .input-div::after, #signup-block .container .signup form .input-div::before {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -109,28 +109,28 @@
   transition: .3s;
 }
 
-#login-block .container .login form .input-div::after {
+#signup-block .container .signup form .input-div::after {
   right: 50%;
 }
 
-#login-block .container .login form .input-div::before {
+#signup-block .container .signup form .input-div::before {
   left: 50%;
 }
 
-#login-block .container .login form .input-div.focus .i i {
+#signup-block .container .signup form .input-div.focus .i i {
   color: #f56a58;
 }
 
-#login-block .container .login form .input-div.focus .input-text h5 {
+#signup-block .container .signup form .input-div.focus .input-text h5 {
   top: -5px;
   font-size: 15px;
 }
 
-#login-block .container .login form .input-div.focus::after, #login-block .container .login form .input-div.focus::before {
+#signup-block .container .signup form .input-div.focus::after, #signup-block .container .signup form .input-div.focus::before {
   width: 50%;
 }
 
-#login-block .container .login form .input-div .i {
+#signup-block .container .signup form .input-div .i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,12 +142,12 @@
           align-items: center;
 }
 
-#login-block .container .login form .input-div div.input-text {
+#signup-block .container .signup form .input-div div.input-text {
   position: relative;
   height: 45px;
 }
 
-#login-block .container .login form .input-div div.input-text h5 {
+#signup-block .container .signup form .input-div div.input-text h5 {
   position: absolute;
   left: 10px;
   top: 50%;
@@ -159,7 +159,7 @@
   transition: 0.3s;
 }
 
-#login-block .container .login form .input-div div.input-text .input {
+#signup-block .container .signup form .input-div div.input-text .input {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -173,7 +173,7 @@
   color: #555;
 }
 
-#login-block .container .login form .btn {
+#signup-block .container .signup form .btn {
   display: block;
   width: 100%;
   height: 50px;
@@ -192,11 +192,11 @@
   transition: .5s;
 }
 
-#login-block .container .login form .btn:hover {
+#signup-block .container .signup form .btn:hover {
   background-position: right;
 }
 
-#login-block .container .login form #password-signup {
+#signup-block .container .signup form #signup-page-login {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -205,22 +205,30 @@
           justify-content: space-between;
 }
 
-#login-block .container .login form #password-signup a, #login-block .container .login form #password-signup .signup-button {
+#signup-block .container .signup form #signup-page-login p {
   display: block;
   text-decoration: none;
   color: #999;
   font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+}
+
+#signup-block .container .signup form #signup-page-login a#login-button {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-size: 0.9rem;
   -webkit-transition: .3s;
   transition: .3s;
   border: none;
-  background-color: #fef9f6;
 }
 
-#login-block .container .login form #password-signup a:hover, #login-block .container .login form #password-signup .signup-button:hover {
+#signup-block .container .signup form #signup-page-login a#login-button:hover {
   color: #f56a58;
 }
 
-#login-block .container .login form .social-text {
+#signup-block .container .signup form .social-text {
   padding: .7rem 0;
   font-size: 1rem;
   display: -webkit-box;
@@ -234,7 +242,7 @@
           align-items: center;
 }
 
-#login-block .container .login form .social-media {
+#signup-block .container .signup form .social-media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,7 +251,7 @@
           justify-content: center;
 }
 
-#login-block .container .login form .social-media .social-icon {
+#signup-block .container .signup form .social-media .social-icon {
   height: 46px;
   width: 46px;
   border: 1px solid lightgrey;
@@ -265,7 +273,7 @@
   transition: .3s;
 }
 
-#login-block .container .login form .social-media .social-icon:hover {
+#signup-block .container .signup form .social-media .social-icon:hover {
   color: #df6355;
   border-color: #df6355;
 }
@@ -312,4 +320,4 @@
             align-items: center;
   }
 }
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=signup.css.map */

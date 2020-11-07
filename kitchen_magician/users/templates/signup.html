@@ -7,22 +7,18 @@
 
 
 {% block content %}
-<section id="login-block">
-    <img class="background" src="{% static 'users/images/background.png' %}">
-    <div class="container" id="login-container">
-        <div class="img">
-            <img class="havingfun" src="{% static 'users/images/havingfun.svg' %}">
-        </div>
-        <div class="login-signup">
+<section id="signup-block">
+    <img class="background" src="{% static 'users/images/backgroundSignup.png' %}">
+    <div class="container" id="signup-container">
+        <div class="signup">
             <!-- sign up  -->
-            <!-- <img class="signup" src="{% static 'users/images/signup.svg' %}"> -->
-            <form action="" class="sign-up-form">
-                <div id="Sign up">
+            <form action="signup.html" class="sign-up-form">
+                <div id="sign-up">
                     <img class="avatar" src="{% static 'users/images/avatar.svg' %}">
                     <h2>Sign up</h2>
                 </div>
                 <!-- username  -->
-                <div class="input-div one">
+                <div class="input-div">
                     <div class="i">
                         <i class="fas fa-user"></i>
                     </div>
@@ -32,7 +28,7 @@
                     </div>
                 </div>
                 <!-- email  -->
-                <div class="input-div one">
+                <div class="input-div">
                     <div class="i">
                         <i class="fas fa-envelope"></i>
                     </div>
@@ -42,7 +38,7 @@
                     </div>
                 </div>
                 <!-- password  -->
-                <div class="input-div two">
+                <div class="input-div">
                     <div class="i">
                         <i class="fas fa-lock"></i>
                     </div>
@@ -51,20 +47,21 @@
                         <input class="input" type="password">
                     </div>
                 </div>
-                <!-- forgot password  -->
-                <div class="input-div two">
+                <!-- password confirmation-->
+                <div class="input-div">
                     <div class="i">
                         <i class="fas fa-lock"></i>
                     </div>
                     <div class="input-text">
-                        <h5>Forgot Password</h5>
+                        <h5>Password Confirmation</h5>
                         <input class="input" type="password">
                     </div>
                 </div>
                 <!-- sign up  -->
                 <input type="submit" class="btn" value="Sign up">
                 <div id="signup-page-login">
-                    <button id="login">Login</button>
+                    <p class="social-text">Already have an account?</p>
+                    <a id="login-button" href="{% url 'login' %}">Login</a>
                 </div>
                 <p class="social-text">Or Sign up with</p>
                 <div class="social-media">
@@ -83,7 +80,14 @@
                 </div>
             </form>
         </div>
+        <div class="img">
+            <img class="signup" src="{% static 'users/images/signup.svg' %}">
+        </div>
     </div>
 </section>
 
-{% endblock content %} 
+
+
+<script type="text/javascript" src="{% static 'users/js/login.js' %}"></script>
+{% endblock content %}
+

@@ -38,6 +38,7 @@ body .container {
   display: flex;
   margin: 2rem auto;
   padding: 0;
+  z-index: 100;
 }
 
 #header .container .KitchenMagician {
@@ -156,8 +157,10 @@ body .container {
   background: #f56a58;
   text-align: center;
   padding: 0.6rem 0;
+  margin-top: 1rem;
   margin-bottom: 0;
   height: auto;
+  z-index: 100;
 }
 
 #main-footer p {

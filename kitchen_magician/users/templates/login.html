@@ -8,7 +8,7 @@
 
 {% block content %}
 <section id="login-block">
-    <img class="background" src="{% static 'users/images/background.png' %}">
+    <img class="background" src="{% static 'users/images/backgroundLogin.png' %}">
     <div class="container" id="login-container">
         <div class="img">
             <img class="havingfun" src="{% static 'users/images/havingfun.svg' %}">
@@ -21,7 +21,7 @@
                     <h2>Welcome</h2>
                 </div>
                 <!-- username  -->
-                <div class="input-div one">
+                <div class="input-div">
                     <div class="i">
                         <i class="fas fa-user"></i>
                     </div>
@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <!-- password  -->
-                <div class="input-div two">
+                <div class="input-div">
                     <div class="i">
                         <i class="fas fa-lock"></i>
                     </div>
@@ -131,21 +131,9 @@
             </form>
         </div>
     </div> -->
-    <!-- <div class="panels-container">
-        <div class="panel left-panel">
-            <div class="img-top"></div>
-            <img class="havingfun" src="{% static 'users/images/havingfun.svg' %}">
-        </div>
-        <div class="panel right-panel">
-            <div class="img-top"></div>
-            <img class="signup" src="{% static 'users/images/signup.svg' %}">
-        </div>
-    </div>
-</section> -->
 
 
 
 <script type="text/javascript" src="{% static 'users/js/login.js' %}"></script>
-<script type="text/javascript" src="{% static 'users/js/panelSwitch.js' %}"></script>
 {% endblock content %}
 
